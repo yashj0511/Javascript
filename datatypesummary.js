@@ -34,6 +34,32 @@ const myFunction=function(){
     console.log("Hello World");
 }
 
-myFunction();
 
-  
+// ********Memory*****//
+
+// Stack (Primitive ), Heap (Non primitive )
+
+//stack used->copoyy milta 
+//Heap used->reference milta
+
+let myChannelName="CoderYash"
+
+let anotherName=myChannelName
+
+myChannelName="YashCoder"
+
+console.log(anotherName);
+
+
+let UserOne={
+    email:"user@gmail.com",
+    upi:"userybl"
+}
+
+let UserTwo=UserOne;
+
+UserTwo.email="jaware@gmail.com";
+
+console.log(UserOne.email);
+
+console.log(UserTwo.email);
