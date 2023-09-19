@@ -1,6 +1,6 @@
 //singleton
 
-//Object.create()//contructoir menthod isse singleton bnta 
+//Object.create()//constructor menthod isse singleton bnta 
 //Contructor se bnega to singleton  bnega
 //Liters ki tarike se singleton nhi banata hai
 
@@ -12,7 +12,7 @@ const mySym=Symbol("key1")
 
 const JsUser={
 name:"Yash",
-// mySym:"myKey1", // it will betrated as string
+// mySym:"myKey1", // it will be trated as string not as symbol
  [mySym]:"myKey1", //now it will be treated as symbol 
 age:22,
 "full name":"Yash Jaware",
@@ -33,7 +33,7 @@ console.log(JsUser[mySym]);//its symbol and it is acess like this
 
 JsUser.email="ycjaware@mitaoe.ac.in  "
 
-// Object.freeze(JsUser)
+// Object.freeze(JsUser) // to make freeze on changes so no one will be able to change 
 
 JsUser.email='yash@google.com';
 

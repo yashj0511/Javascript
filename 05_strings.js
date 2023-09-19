@@ -24,7 +24,7 @@ const RepsosCount=50;
  console.log(newString);
 
  const anotherString= gameName.slice(-6,5);//negative index allowed
- console.log(anotherString);
+ console.log("SLice Output ",anotherString);
 
 
 

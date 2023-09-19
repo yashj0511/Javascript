@@ -39,7 +39,7 @@ const myFunction=function(){
 
 // Stack (Primitive ), Heap (Non primitive )
 
-//stack used->copoyy milta 
+//stack used->copy   milta 
 //Heap used->reference milta
 
 let myChannelName="CoderYash"
@@ -48,8 +48,7 @@ let anotherName=myChannelName
 
 myChannelName="YashCoder"
 
-console.log(anotherName);
-
+console.log(anotherName);//prints CoderYash means pointing to new memory not same as myChannelName
 
 let UserOne={
     email:"user@gmail.com",
@@ -60,6 +59,6 @@ let UserTwo=UserOne;
 
 UserTwo.email="jaware@gmail.com";
 
-console.log(UserOne.email);
+console.log(UserOne.email);//prints jaware@gmail.com because pointing to same memory
 
-console.log(UserTwo.email);
+console.log(UserTwo.email);//prints jaware@gmail.com because pointing to same memory

@@ -1,11 +1,11 @@
 const marvelHeros=["Thor","IronMan","SpiderMan"]
 const dc=["Superman","flash","batman"]
 
-// marvelHeros.push(dc) //pushes on current array
+// marvelHeros.push(dc) //pushes on current array , array ke andar 1 array 
 // console.log(marvelHeros[3][1]);
 
-// allheros=marvelHeros.concat(dc) //returns a new array
-// console.log(allheros);
+allheros=marvelHeros.concat(dc) //returns a new array
+console.log(allheros);
 
 const all_new_heros=[...marvelHeros,...dc]
 console.log(all_new_heros);
@@ -15,8 +15,8 @@ const real_another_array=anotherArray.flat(Infinity)
 console.log(real_another_array);
 
 
-console.log(Array.isArray("yash"));
-console.log(Array.from("Yash"));
+console.log("IsArray method",Array.isArray("yash"));//checks whether the given input is array or not 
+console.log(Array.from("Yash"));//  make array of the provided input 
 
 console.log(Array.from({name:"Yash",age:22}));//interesting 
 

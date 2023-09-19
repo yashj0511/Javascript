@@ -23,7 +23,7 @@ let myTimeStamp = Date.now()
 // console.log(myCreatedDate2.getTime());//will get you the value of time from which javascript started counting till the date you provided now you can compare the timestamps
 
 
-console.log(Math.floor(Date.now()/1000));
+console.log("Output of Date.now",Math.floor(Date.now()/1000));
 
 let NewDate=new Date()
 console.log(NewDate.getDate());
