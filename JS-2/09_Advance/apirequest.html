@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  API Request </title>
+</head>
+<body style="background-color: black;color: white;">
+    
+</body>
+<script>
+    const xhr = new XMLHttpRequest() 
+    const requestUrl='https://api.github.com/users/yashj0511'
+    xhr.open('GET',requestUrl)//takes 2 parameter one method second string 
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            const data=JSON.parse(this.responseText)//type of data is string becuase response comes in string format mostly JSON.parse will convert it means string to JSON
+            const image=data.avatar_url
+            const followers=data.followers
+            const div=document.createElement('div')
+            div.style.height="800px"
+            div.style.width="800px"
+            div.style.color="white"
+            const img=document.createElement('img')
+            img.src=image
+            const p=document.createElement('p')
+            p.innerHTML=`followers : ${followers}`
+
+            div.appendChild(img)
+            div.appendChild(p)
+            const body=document.querySelector('body')
+            body.appendChild(div)
+
+
+            
+        }
+    }//onreadystatechange takes a fuction which runs after a change in state
+  
+    xhr.send()//call
+
+
+
+</script>
+</html>
