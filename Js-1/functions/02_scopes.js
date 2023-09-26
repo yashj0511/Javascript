@@ -55,7 +55,8 @@ function AddOne(num){
 
 }
 
-// console.log(addtwo(5));//gives error 
+//console.log(addtwo(5));//gives error 
 const addtwo=function(num){
     return num+2;
 }//function which is also called expressions
+ 

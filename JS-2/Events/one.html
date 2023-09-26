@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div class="imaged" id="img">
+        <ul id="imagelist">
+            <li id="one"><img src="https://tse1.mm.bing.net/th?id=OIP.HxV79tFMPfBAIo0BBF-sOgHaEy&pid=Api&rs=1&c=1&qlt=95&w=177&h=114" alt="" style="height: 300px;"></li>
+            <li id="two"><img src="https://tse1.mm.bing.net/th?id=OIP.HxV79tFMPfBAIo0BBF-sOgHaEy&pid=Api&rs=1&c=1&qlt=95&w=177&h=114" style="height: 300px" alt="" ></li>
+            <li id="three"><img src="https://tse1.mm.bing.net/th?id=OIP.HxV79tFMPfBAIo0BBF-sOgHaEy&pid=Api&rs=1&c=1&qlt=95&w=177&h=114" style="height: 300px" alt=""></li>
+            <li id="four"><img src="https://tse1.mm.bing.net/th?id=OIP.HxV79tFMPfBAIo0BBF-sOgHaEy&pid=Api&rs=1&c=1&qlt=95&w=177&h=114" alt="" style="height: 300px"></li>
+            <li id="five"><img src="https://tse1.mm.bing.net/th?id=OIP.HxV79tFMPfBAIo0BBF-sOgHaEy&pid=Api&rs=1&c=1&qlt=95&w=177&h=114" alt="" style="height: 300px"></li>
+            <li ><a  id="google" href="www.google.com">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+//this is good pratise to use events    
+// document.getElementById('one').addEventListener('click',(e)=>{
+//     alert("Yoga ")
+//     console.log(e.clientX);
+// })
+
+//type,timestamp,defaultPrevented
+//target,toElement,srcElement,currentTarget
+//clientX,clientY,screenX,screenY
+//altkey,ctrlkey,shiftkey,keyCode
+
+//event propogation->event bubleing,event capturing 
+
+// document.getElementById('img').addEventListener('click',(e)=>{
+
+//     console.log(" clicked the ul ");
+// })
+// document.getElementById('one').addEventListener('click',(e)=>{
+   
+//     console.log(" One clicked ");
+// })
+
+
+
+//capturing mode
+
+// document.getElementById('img').addEventListener('click',(e)=>{
+
+// console.log(" clicked the ul ");
+// },true)
+// document.getElementById('one').addEventListener('click',(e)=>{
+
+// console.log(" One clicked ");
+// },true)
+
+//by default the value is false means we are by default in bubbling mode means one will print first then ul but if made the falue as true then we are in capturing mode means the value ul print first then one clicked
+
+
+// document.getElementById('img').addEventListener('click',(e)=>{
+
+// console.log(" clicked the ul ");
+// },false)
+
+// document.getElementById('two').addEventListener('click',(e)=>{
+//     console.log("second img clicked ");
+// e.stopPropagation()//means it will not go after bubble to uppeer element 
+
+
+// },false)
+
+// document.getElementById('google').addEventListener('click',function(e){
+//     e.preventDefault()
+//     e.stopPropagation()
+//     console.log("Google clicked");
+// })
+
+// document.querySelector('#imagelist').addEventListener('click',function(e){
+// console.log(e.target.parentNode);
+// const removeIt=e.target.parentNode
+// removeIt.remove()
+
+// },false)//problem in this is when you click on li whole list get deleted
+
+//removeIt.parentNode.removeChild(removeIt)
+
+document.querySelector('#imagelist').addEventListener('click',function(e)
+{
+console.log(e.target.tagName);
+if(e.target.tagName==='IMG'){
+    console.log(e.target.id);
+    const removeIt=e.target.parentNode
+removeIt.remove()
+}
+
+},false)
+</script>
+</html>

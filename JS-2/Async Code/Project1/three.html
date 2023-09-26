@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1> Chai aur JS </h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+let announce;    
+const stopMyName=function(ref){
+clearInterval(ref)
+}    
+const greet=function(name){
+    console.log(`Hello ${name} - ${Date.now()}`);
+}    
+const SayMyName=function()
+{
+    announce=setInterval(greet,2000," Yash ")
+}
+
+document.querySelector('#start').addEventListener('click',function(){
+    SayMyName()
+})
+ 
+document.querySelector('#stop').addEventListener('click',function()
+{
+    stopMyName(announce)
+})
+ 
+   
+
+</script> 
+</html>

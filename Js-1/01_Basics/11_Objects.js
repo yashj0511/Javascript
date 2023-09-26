@@ -61,9 +61,10 @@ const course={
 }
 //console.log(course.price);
 
-const {courseInstructor}= course//extracting courseInstructor from course  object destructuring 
+const {courseInstructor: instrucor }= course//extracting courseInstructor from course  object destructuring 
 
-console.log("Destructure Object",courseInstructor);
+// console.log("Destructure Object",courseInstructor);
+console.log(instrucor);
 
 
 

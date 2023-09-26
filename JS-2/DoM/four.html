@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code aur Code</title>
+</head>
+<body style="background-color: black;color: white;">
+        <ul class="lang">
+<li>Javascript</li>
+        </ul>
+</body>
+<script>
+    function addLang(langName)
+    {
+        const li=document.createElement('li')
+        li.innerHTML=langName//travese whole tree not good for more elements
+        document.querySelector('.lang').appendChild(li)
+    }
+    addLang("python")
+    addLang("typyscript")
+
+
+    //some good pratice to optimize the code becuase in above we have to traverse all
+
+
+    function addOptiLanguage(langName)
+    {
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))//this is better way to do it 
+        document.querySelector('.lang').appendChild(li)
+    }
+addOptiLanguage("Java")
+
+//Edit
+const secondLang=document.querySelector("li:nth-child(2)")
+
+const newli=document.createElement('li')
+newli.textContent="Mojo"
+secondLang.replaceWith(newli)
+
+
+// //edit 
+const firstLang=document.querySelector('li:first-child')
+firstLang.outerHTML="<li>Typescript</li>"
+
+
+//remove
+const latsLang=document.querySelector("li:last-child")
+latsLang.remove()
+
+const ul=document.querySelector('ul')
+console.log(ul.children)
+</script>
+</html>

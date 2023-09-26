@@ -1,0 +1,16 @@
+
+<!-- innertext ->jo dikh raha hai vo
+textcontent ->sara text content 
+innerhtml->gives html code 
+-->
+
+<!-- nodelist and array are diffrent  
+arraymethod acess nhi krske jyada on node list kuch ke skte hai
+
+
+Htmlcolletion pr looping krne ke liye kuch kam nhi krega to phle convert krp array me using Array.from(yourhtmlcolletion)
+
+you can convert it using Array.from()
+-->
+
+queryselector se nodelist milta aur getelemntyclassname se htmlcollection

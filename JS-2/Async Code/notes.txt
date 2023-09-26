@@ -1,0 +1,30 @@
+Javascript->
+           |
+           |______>It is Syncronous Language
+           |
+           |_________>Single Threaded
+
+           This is Default JS behaviour
+
+
+Execution Context->
+                  |
+                  ------>execute one line of code at a time 
+                  |          
+                  | [each opration waits for the last one to complete    before executing]
+                  |----->consolo.log -> 1
+                  |----->console.log-> 2
+                  |  we also have CALL  Stack ,  Memory Heap
+                  |
+            This is Single Thread
+
+
+
+
+
+
+Blocking Code         Vs            Non Blocking Code
+Block the flow of program       Does not Block the Execution
+          |                               |
+ read file Syncronous               Read File asynchronous
+

@@ -1,0 +1,26 @@
+.colors-gird{
+    display: flex;
+    justify-content: center;
+
+}
+h1{
+    text-align: center;
+}
+.color{
+
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+#grey{
+background-color: grey;
+}
+#white{
+background-color: white;
+}
+#yellow{
+background-color: yellow;
+}
+#purple{
+background-color: purple;
+}

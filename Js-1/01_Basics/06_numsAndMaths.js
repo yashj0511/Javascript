@@ -9,7 +9,7 @@ console.log(balance.toFixed(2));
 
 const otherNumber=12.898890
 
-console.log(otherNumber.toPrecision(3));
+console.log("othernumber",otherNumber.toPrecision(3));
 
 const hundreads=1000000
 console.log(hundreads.toLocaleString());
