@@ -21,7 +21,8 @@ console.log("Outer a: ",a);
 //when we run on browser when we run on node means here there is difference in scope
 
 
-function one(){
+function one()
+{
     const username="Yash"
     function two()
     {
@@ -34,7 +35,8 @@ function one(){
 }
 one()
 
-if (true){
+if (true)
+{
     const userName="Yash"
     if(true){
         if (userName=="Yash"){
@@ -45,7 +47,7 @@ if (true){
     // console.log(website);
 
 }
-// console.log(userName);
+//console.log(userName);
 
 
 //***********Intersting***** */
